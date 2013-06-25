@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Score {
+	private static final int SCORE_FOR_ADVANTAGE_CALCULATIONS = 3;
 	private static final String NO_SCORE = " ";
 	private static final String WON = "W";
 	private static final String ADVANTAGE = "A";
@@ -40,15 +41,18 @@ public class Score {
 	}
 
 	private boolean haveAdvantage() {
-		return score > otherScore.score && score >= 4;
+		return score > otherScore.score
+				&& score > SCORE_FOR_ADVANTAGE_CALCULATIONS;
 	}
 
 	boolean isDeuce() {
-		return score == otherScore.score && score >= 3;
+		return score == otherScore.score
+				&& score >= SCORE_FOR_ADVANTAGE_CALCULATIONS;
 	}
 
 	boolean won() {
-		return score >= 4 && score - otherScore.score >= 2;
+		return score > SCORE_FOR_ADVANTAGE_CALCULATIONS
+				&& score - otherScore.score >= 2;
 	}
 
 	public void setOther(Score otherScore) {
