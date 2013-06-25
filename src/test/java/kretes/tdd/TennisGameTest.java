@@ -1,5 +1,7 @@
-package pragmatists.tdd.displayer;
+package kretes.tdd;
 
+
+import kretes.tdd.TennisGame;
 
 import org.fest.assertions.Assertions;
 import org.junit.Test;

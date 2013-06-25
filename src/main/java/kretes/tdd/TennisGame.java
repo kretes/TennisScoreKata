@@ -1,4 +1,4 @@
-package pragmatists.tdd.displayer;
+package kretes.tdd;
 
 public class TennisGame {
 

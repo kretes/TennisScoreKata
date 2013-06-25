@@ -1,4 +1,4 @@
-package pragmatists.tdd.displayer;
+package kretes.tdd;
 
 import java.util.HashMap;
 import java.util.Map;
